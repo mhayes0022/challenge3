@@ -4,7 +4,7 @@
 
 This page is a random password generator. When you select the button labeled "Generate", a prompt will appear asking you how many characters you would like your password to be. If you submit an answer that is fewer than 8 letter, you will recieve an alert that informs you that you need to select a number that is 8 or more. You will get a similar alert if you attemp to put in a number larger than 128.
 
-Next a prompt will appear asking if you would like lower case characters in your password. Then it will ask if you'd like upper case characters, then numbers, then special characters. If don't select any options, you will recieve an alert that "you did not select anything. Your password does not exist."
+Next, a prompt will appear asking if you would like lower case characters in your password. Then it will ask if you'd like upper case characters, then numbers, then special characters. If you don't select any options, you will recieve the alert "you did not select anything. Your password does not exist."
 
 
 
