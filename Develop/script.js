@@ -50,7 +50,7 @@ function generatePassword() {
   }
   
   if(possibleCharacters.length === 0) {
-    alert("You did not select anything.");
+    alert("You did not select anything. Your password does not exist.");
     return password
   }
 
