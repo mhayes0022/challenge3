@@ -5,19 +5,22 @@ var numberChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '-']
 
 
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
-  
 }
 
-function generatePassword() {
-  var passwordLength = prompt("How many characters do you want in your password?");
 
-  if (passwordLength >= 128) {
+
+function generatePassword() {
+  var possibleCharacters = [];
+  var password = ""
+
+  var passwordLength = prompt("How many characters do you want in your password?");
+   if (passwordLength >= 128) {
     alert("Password can be no more than 128 characters");
     return
   }
@@ -25,33 +28,29 @@ function generatePassword() {
     alert("password can be no shorter than 8 characters");
     return
   }
-
-  var possibleCharacters = [];
-
+  
   var lowerCase = confirm("Do you want lowercase letters in your password?");
   if (lowerCase === true) {
     possibleCharacters = possibleCharacters.concat(lowerCaseChar);
   } 
-
-
- var upperCase = confirm("Do you want uppercase letters in your password?");
+  
+  var upperCase = confirm("Do you want uppercase letters in your password?");
   if (upperCase === true) {
-  possibleCharacters = possibleCharacters.concat(upperCaseChar);
- }
-
+    possibleCharacters = possibleCharacters.concat(upperCaseChar);
+  }
+  
   var numbers = confirm("Do you want to include numbers in your passowrd?");
   if (numbers === true) {
     possibleCharacters = possibleCharacters.concat(numberChar);
   }
-
-  var specialCharacters = confirm("Do you want to include special characters i nyour password?");
+  
+  var specialCharacters = confirm("Do you want to include special characters in your password?");
   if (specialCharacters === true) {
     possibleCharacters = possibleCharacters.concat(specialChar);
- }
-var password = ""
-
-if(possibleCharacters.length === 0) {
-    alert("Your password is empty");
+  }
+  
+  if(possibleCharacters.length === 0) {
+    alert("You did not select anything.");
     return password
   }
 
@@ -59,21 +58,9 @@ if(possibleCharacters.length === 0) {
   var randomNum = Math.floor(Math.random()*(possibleCharacters.length -1));
   var randomLetter = possibleCharacters[randomNum];
   password+=randomLetter;
-
   
 }
-
-// Do I also need a contingency for if nothing is selected?
-  console.log(lowerCase);
-  console.log(upperCase);
- // console.log(numbers);
-  //console.log(specialCharacters);
- // console.log(passwordLength);
-//alert("your password is " + password);
 return password
 }
 
-
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
