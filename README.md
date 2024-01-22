@@ -9,7 +9,10 @@ Next, a prompt will appear asking if you would like lower case characters in you
 
 
 ## Website Link
+https://mhayes0022.github.io/challenge3/
 
+
+## Website Screenshot
 
 ## Credits
 
