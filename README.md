@@ -13,6 +13,8 @@ https://mhayes0022.github.io/challenge3/
 
 
 ## Website Screenshot
+![03-javascript-homework-demo](https://github.com/mhayes0022/challenge3/assets/153241703/316fdcaa-7377-4135-af77-7add4c9a0f48)
+
 
 ## Credits
 
